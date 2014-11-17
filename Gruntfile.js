@@ -54,19 +54,19 @@ module.exports = function (grunt) {
 				src: 'distribution.html',
 				dest: 'distribution.html',
 				replacements: [{
-					from: '_HOSTEDLINK__',
+					from: '{{HOSTEDLINK}}',
 					to: '<%= hostedLink %>'
 				}, {
-					from: '_IMAGE__',
+					from: '{{IMAGE}}',
 					to: '<%= imageDir %>'
 				}, {
-					from: '_BACKGROUNDCOLOR__',
+					from: '{{BACKGROUNDCOLOR}}',
 					to: '<%= backgroundColor %>'
 				}, {
-					from: '_FOREGROUNDCOLOR__',
+					from: '{{FOREGROUNDCOLOR}}',
 					to: '<%= foregroundColor %>'
 				}, {
-					from: '_LINKCOLOR__',
+					from: '{{LINKCOLOR}}',
 					to: '<%= linkColor %>'
 				}]
 			}

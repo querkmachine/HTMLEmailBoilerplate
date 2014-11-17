@@ -29,29 +29,29 @@
 			line-height: 100%;
 		}
 		h1, h2, h3, h4, h5, h6 {
-			color: _FOREGROUNDCOLOR__;
+			color: {{FOREGROUNDCOLOR}};
 			line-height: 100%;
 		}
 		/* Yahoo Mail, AOL */
 		body,
 		#body_style {
 			min-height: 1000px;
-			color: _FOREGROUNDCOLOR__;
-			background: _BACKGROUNDCOLOR__;
+			color: {{FOREGROUNDCOLOR}};
+			background: {{BACKGROUNDCOLOR}};
 			font-family: 'Helvetica Neue', Helvetica, Arial, FreeSans, sans-serif;
 			font-size: 12px;
 		}
 		/* Yahoo Mail */
 		span.yshortcuts {
 			border: none;
-			color: _LINKCOLOR__;
+			color: {{LINKCOLOR}};
 			background-color: none;
 		}
 		span.yshortcuts:hover,
 		span.yshortcuts:active,
 		span.yshortcuts:focus {
 			border: none;
-			color: _LINKCOLOR__;
+			color: {{LINKCOLOR}};
 			background-color: none;
 		}
 		/* Everything except Gmail */
@@ -62,7 +62,7 @@
 		}
 		a,
 		a:link {
-			color: _LINKCOLOR__;
+			color: {{LINKCOLOR}};
 			text-decoration: underline;
 		}
 		/* Internet Explorer */
@@ -84,8 +84,8 @@
 			width: 100% !important; 
 			margin: 0; 
 			padding: 0; 
-			color: _FOREGROUNDCOLOR__;
-			background: _BACKGROUNDCOLOR__; 
+			color: {{FOREGROUNDCOLOR}};
+			background: {{BACKGROUNDCOLOR}}; 
 		} 
 		td[class='hideOnDesktop'] {
 			display: none;
@@ -121,9 +121,9 @@
 	</style>
 	<title></title>
 </head>
-<body style="min-height:1000px;color:_FOREGROUNDCOLOR__;background:_BACKGROUNDCOLOR__;font-family:'Helvetica Neue',Helvetica,Arial,FreeSans,sans-serif;font-size:12px;" alink="_LINKCOLOR__" link="_LINKCOLOR__" bgcolor="_BACKGROUNDCOLOR__" text="_FOREGROUNDCOLOR__" yahoo="fix">
+<body style="min-height:1000px;color:{{FOREGROUNDCOLOR}};background:{{BACKGROUNDCOLOR}};font-family:'Helvetica Neue',Helvetica,Arial,FreeSans,sans-serif;font-size:12px;" alink="{{LINKCOLOR}}" link="{{LINKCOLOR}}" bgcolor="{{BACKGROUNDCOLOR}}" text="{{FOREGROUNDCOLOR}}" yahoo="fix">
 	<span class="body_style" style="display:block;">
-		<table cellpadding="0" cellspacing="0" border="0" bgcolor="_BACKGROUNDCOLOR__" width="100%" align="center">
+		<table cellpadding="0" cellspacing="0" border="0" bgcolor="{{BACKGROUNDCOLOR}}" width="100%" align="center">
 			<tr>
 				<td align="center" valign="top" width="100%">
 					<table cellpadding="0" cellspacing="0" border="0" width="650" class="contentTable">
@@ -134,9 +134,9 @@
 										<td align="center" valign="middle" width="35%" height="130" style="font-size:0;line-height:0;" class="branding">
 											<img src="http://placeponi.es/200/50" alt="" align="left" width="200" border="0" style="display:block;margin:0;" />
 										</td>
-										<td align="left" valign="middle" width="60%" style="font-family:'Helvetica Neue',Helvetica,Arial,FreeSans,sans-serif;color:_FOREGROUNDCOLOR__;font-size:11px;" class="hideOnMobile">
+										<td align="left" valign="middle" width="60%" style="font-family:'Helvetica Neue',Helvetica,Arial,FreeSans,sans-serif;color:{{FOREGROUNDCOLOR}};font-size:11px;" class="hideOnMobile">
 											<strong>Put your preheader line here if you want.</strong><br/><br/>
-											To view online <a href="_HOSTEDLINK__" style="color:_FOREGROUNDCOLOR__;text-decoration:underline;" target="_blank"><span style="color:_FOREGROUNDCOLOR__;">click here</span></a>.
+											To view online <a href="{{HOSTEDLINK}}" style="color:{{FOREGROUNDCOLOR}};text-decoration:underline;" target="_blank"><span style="color:{{FOREGROUNDCOLOR}};">click here</span></a>.
 										</td>
 										<td width="5%" style="font-size:0;line-height:0;" class="hideOnMobile"></td>
 									</tr>
