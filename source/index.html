@@ -29,29 +29,29 @@
 			line-height: 100%;
 		}
 		h1, h2, h3, h4, h5, h6 {
-			color: {{FOREGROUNDCOLOR}};
+			color: {{COLOR:TEXT}};
 			line-height: 100%;
 		}
 		/* Yahoo Mail, AOL */
 		body,
 		#body_style {
 			min-height: 1000px;
-			color: {{FOREGROUNDCOLOR}};
-			background: {{BACKGROUNDCOLOR}};
-			font-family: 'Helvetica Neue', Helvetica, Arial, FreeSans, sans-serif;
+			color: {{COLOR:TEXT}};
+			background: {{COLOR:BACKGROUND}};
+			font-family: {{FONTS}};
 			font-size: 12px;
 		}
 		/* Yahoo Mail */
 		span.yshortcuts {
 			border: none;
-			color: {{LINKCOLOR}};
+			color: {{COLOR:LINK}};
 			background-color: none;
 		}
 		span.yshortcuts:hover,
 		span.yshortcuts:active,
 		span.yshortcuts:focus {
 			border: none;
-			color: {{LINKCOLOR}};
+			color: {{COLOR:LINK}};
 			background-color: none;
 		}
 		/* Everything except Gmail */
@@ -62,7 +62,7 @@
 		}
 		a,
 		a:link {
-			color: {{LINKCOLOR}};
+			color: {{COLOR:LINK}};
 			text-decoration: underline;
 		}
 		/* Internet Explorer */
@@ -84,8 +84,8 @@
 			width: 100% !important; 
 			margin: 0; 
 			padding: 0; 
-			color: {{FOREGROUNDCOLOR}};
-			background: {{BACKGROUNDCOLOR}}; 
+			color: {{COLOR:TEXT}};
+			background: {{COLOR:BACKGROUND}}; 
 		} 
 		td[class='hideOnDesktop'] {
 			display: none;
@@ -95,35 +95,38 @@
 			mso-hide: all;
 		}
 		/* Mobiles */
-		@media only screen and (max-device-width: 650px) {
+		@media only screen and (max-width: 650px) {
 			body[yahoo] img {
 				max-width: 100% !important;
 				height: auto !important;
 			}
-			td[class='hideOnMobile'] {
-				display: none !important;
-			}
-			td[class='hideOnDesktop'] {
+			.mobile-only {
 				display: block !important;
+				width: auto !important;
+				height: auto !important;
 				max-height: none !important;
+			}
+			.desktop-only {
+				max-height: 0px !important;
+				font-size: 0 !important;
+				display: none !important;
 			}
 			table[class='contentTable'] {
 				width: 100% !important;
 			}
-			td[class='branding'] {
+			td[class='branding'], 
+			td[class='preheader'] {
+				display: table-row !important;
 				width: 100% !important;
+				text-align: center !important;
 			}
-			
 		}
-		/* Tablets */
-		/*@media only screen and (min-device-width: 600px) and (max-device-width: 670px)  {
-		}*/
 	</style>
 	<title></title>
 </head>
-<body style="min-height:1000px;color:{{FOREGROUNDCOLOR}};background:{{BACKGROUNDCOLOR}};font-family:'Helvetica Neue',Helvetica,Arial,FreeSans,sans-serif;font-size:12px;" alink="{{LINKCOLOR}}" link="{{LINKCOLOR}}" bgcolor="{{BACKGROUNDCOLOR}}" text="{{FOREGROUNDCOLOR}}" yahoo="fix">
+<body style="min-height:1000px;color:{{COLOR:TEXT}};background:{{COLOR:BACKGROUND}};font-family:{{FONTS}};font-size:12px;" alink="{{COLOR:LINK}}" link="{{COLOR:LINK}}" bgcolor="{{COLOR:BACKGROUND}}" text="{{COLOR:TEXT}}" yahoo="fix">
 	<span class="body_style" style="display:block;">
-		<table cellpadding="0" cellspacing="0" border="0" bgcolor="{{BACKGROUNDCOLOR}}" width="100%" align="center">
+		<table cellpadding="0" cellspacing="0" border="0" bgcolor="{{COLOR:BACKGROUND}}" width="100%" align="center">
 			<tr>
 				<td align="center" valign="top" width="100%">
 					<table cellpadding="0" cellspacing="0" border="0" width="650" class="contentTable">
@@ -131,26 +134,30 @@
 							<td width="100%">
 								<table cellpadding="0" cellspacing="0" border="0" width="100%">
 									<tr>
-										<td align="center" valign="middle" width="35%" height="130" style="font-size:0;line-height:0;" class="branding">
+										<td align="center" valign="middle" width="35%" style="font-size:0;line-height:0;" class="branding">
 											<img src="http://placeponi.es/200/50" alt="" align="left" width="200" border="0" style="display:block;margin:0;" />
 										</td>
-										<td align="left" valign="middle" width="60%" style="font-family:'Helvetica Neue',Helvetica,Arial,FreeSans,sans-serif;color:{{FOREGROUNDCOLOR}};font-size:11px;" class="hideOnMobile">
-											<strong>Put your preheader line here if you want.</strong><br/><br/>
-											To view online <a href="{{HOSTEDLINK}}" style="color:{{FOREGROUNDCOLOR}};text-decoration:underline;" target="_blank"><span style="color:{{FOREGROUNDCOLOR}};">click here</span></a>.
+										<td align="left" valign="middle" width="60%" style="font-family:{{FONTS}};color:{{COLOR:TEXT}};font-size:11px;" class="preheader">
+											<strong>Put your preheader line here if you want.</strong><br/>
+											To view online <a href="#" style="color:{{COLOR:TEXT}};text-decoration:underline;" target="_blank"><span style="color:{{COLOR:TEXT}};">CLICK HERE</span></a>.
 										</td>
-										<td width="5%" style="font-size:0;line-height:0;" class="hideOnMobile"></td>
 									</tr>
 								</table>
 							</td>
 						</tr>
 						<tr>
-							<td width="100%" style="font-size:0;line-height:0;" class="hideOnMobile">
-								<img src="http://placeponi.es/650/300" alt="" width="650" align="left" border="0" style="display:block;margin:0;" />
-							</td>
+							<td height="" 
 						</tr>
 						<tr>
-							<td width="100%" style="font-size:0;line-height:0;" class="hideOnDesktop">
-								<img src="http://placeponi.es/650/330" alt="" width="650" align="left" border="0" style="display:block;margin:0;" />
+							<td width="100%" style="font-size:0;line-height:0;">
+								<div class="desktop-only">
+									<img src="http://placeponi.es/650/300" alt="" align="left" width="650" border="0" style="display:block;margin:0;" />
+								</div>
+								<!--[if !mso]><!-->
+								<div class="mobile-only" style="display:none;mso-hide:all;width:0px;height:0px;max-height:0px;overflow:hidden;line-height:0px;">
+									<img src="http://placeponi.es/650/330" alt="" align="left" width="650" border="0" style="display:block;margin:0;" />
+								</div>
+								<!--<![endif]-->
 							</td>
 						</tr>
 					</table>
