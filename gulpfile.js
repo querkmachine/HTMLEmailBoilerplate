@@ -74,6 +74,6 @@ gulp.task("imagemin", function() {
 
 gulp.task("default", function() {
 	gulp.watch("source/index.html", ["htmlmin"]);
-	gulp.watch("source/img/*", ["imgmin"]);
+	gulp.watch("source/img/*", ["imagemin"]);
 });
 
